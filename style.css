@@ -11,6 +11,43 @@ body{
 
 }
 
+main .members{
+    margin: 10px ;
+    height: 90vh;
+}
+
+.members .teams{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 3%;
+}
+
+.teams .team{
+    width: 31%;
+    height: 60vh;  
+    position: relative;
+}
+
+.team div{
+    position: absolute;
+    background-color: #2878eb;
+    height: 12vh;
+    margin-top: -20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 main .Testimonial{
     margin: 10px 30px 0 30px ;
     height: 80vh;
@@ -25,19 +62,22 @@ main .Testimonial{
 }
 
 .Testimonial .scroll{
-    background-color: #f24d5d;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1%;
+    margin-top: 1%;
 }
 
 .scroll div{
-    width: 1%;
-    height: 5vh;
+    width: 10px;
+    height: 6vh;
     background-color: #e0e0e0;
-    border-radius: 60% ;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 
@@ -74,7 +114,7 @@ main .blog{
     height: 110vh;
 }
 
-main .blog h1, .Testimonial h1{
+main .blog h1, .Testimonial h1, .members h1{
     text-align: center;
     font-weight: 700; 
 }
