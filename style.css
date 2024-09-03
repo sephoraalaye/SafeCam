@@ -11,7 +11,7 @@ body{
 }
 
 main .services{
-    background-color: red;
+    /* background-color: red; */
     height: 230vh;
     margin: 3% 5%;
 }
@@ -21,16 +21,46 @@ main .services{
     justify-content: center;
     flex-wrap: wrap;
     height: 198vh;
-    background-color: yellow;
     gap: 2%;
 }
+
+
 
 .services .service div{
     width: 49%;
     height: 63vh;
     background-color: #ecf4ff;
     border-bottom: #2878eb 5px solid;
+    padding: 2%;
 }
+
+.services .service div:hover {
+    background-color: rgba(40, 120, 235,0.7);
+    border-bottom: #2878eb 5px solid;
+}
+
+
+
+.service a{
+    text-decoration: none;
+    color: #2878eb;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
+.service a i{
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+
+.service div:hover a{
+    color: white;
+    font-weight: 700;
+}
+
+
 
 
 main .pricing{
