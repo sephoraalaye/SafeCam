@@ -10,9 +10,28 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
+main .propos{
+    background-color:wheat;
+    height: 220vh;
+    margin: 3% 2%;  
+}
+
+.propos .pretexte{
+    color: #6b6a75;
+    font-size: 21px;
+    font-weight: 700;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    margin: 3% 0 4% 0;
+    
+}
+
+
+
+
 main .services{
-    /* background-color: red; */
-    height: 230vh;
+    height: 220vh;
     margin: 3% 5%;
 }
 
@@ -27,25 +46,40 @@ main .services{
 
 
 .services .service div{
+    position: relative;
     width: 49%;
     height: 63vh;
     background-color: #ecf4ff;
     border-bottom: #2878eb 5px solid;
     padding: 2%;
+    overflow: hidden;
 }
 
-.services .service div:hover {
-    background-color: rgba(40, 120, 235,0.7);
-    border-bottom: #2878eb 5px solid;
+
+.services .service .couleur{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 120, 235,0.8);
+    transition: left 0.5s ease;
+    border-bottom: none;
 }
 
+.services .service div:hover .couleur{
+    left: 0;
+    
+}
 
 
 .service a{
+    position: relative;
     text-decoration: none;
     color: #2878eb;
     margin-left: 3%;
     font-size: 20px;
+   
 }
 
 .service a i{
@@ -58,9 +92,8 @@ main .services{
 .service div:hover a{
     color: white;
     font-weight: 700;
+    z-index: 5;
 }
-
-
 
 
 main .pricing{
@@ -300,7 +333,7 @@ main .blog{
     height: 110vh;
 }
 
-main .blog h1, .Testimonial h1, .members , .pricing h1, .services h1{
+main .blog h1, .Testimonial h1, .members , .pricing h1, .services h1, .propos h1{
     text-align: center;
     font-weight: 700; 
 }
