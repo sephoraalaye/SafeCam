@@ -11,9 +11,12 @@ body{
 }
 
 main .propos{
-    background-color:wheat;
-    height: 220vh;
+    /* background-color:wheat; */
+    height:228vh;
     margin: 3% 2%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .propos .pretexte{
@@ -25,6 +28,47 @@ main .propos{
     justify-content: center;
     margin: 3% 0 4% 0;
     
+}
+
+.propos .experience{ 
+    width: 60%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.propos .experience div{
+    width: 41%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.propos .image{
+    /* border: #120f2c solid 1px; */
+    height: 70%;
+    width: 100%;
+}
+
+.image img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.experience i{
+    color: white;
+    font-size: 5em;
+}
+
+.experience p{
+    font-size: 24px;
+    font-weight: 700;
 }
 
 
