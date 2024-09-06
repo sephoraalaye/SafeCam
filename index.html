@@ -8,7 +8,7 @@
     <title>SafeCam | Acceuil</title>
   </head>
   <body>
-    <!-- <header>
+     <header>
       <p><span>Safe</span><span>Cam</span></p>
       <nav>
         <ul>
@@ -23,9 +23,14 @@
         <img src="" alt="" />
         <p>+229 61528962</p>
       </div>
-    </header> -->
+    </header> 
     <main>
-      <section>
+      <div id="carrousel">
+        <div id="container"></div>
+        <img src="images/bouton.png" class="bouton"  id="d">
+        <img src="images/bouton.png" class="bouton"  id="g">
+      </div>
+      <!-- <section>
         <p>Best security services</p>
         <p>Safe & Secure Home</p>
         <p>For Your Family</p>
@@ -34,7 +39,7 @@
           <button>Conctact us</button>
         </div>
         <img src="" alt="" />
-      </section>
+      </section> -->
       <section class="propos">
         <h1 class="entete">About us</h1>
         <h1>We Offers Quality CCTV Systems & Services</h1>
@@ -408,5 +413,55 @@
             <div>Designed by <a href="index.html">HTML Codex</a></div>
         </div>
     </footer>
+
+
+    <script>
+      document.body.onload=function(){
+        nbr = 3;
+        p= 0;
+        container = document.getElementById("container");
+        d = document.getElementById("d");
+        g = document.getElementById("g");
+        container.style.width=(1280*nbr)+"px";
+        for(var i=1;i<=nbr;i++){
+          div=document.createElement("div");
+          div.className="photo";
+          div.style.backgroundImage="url('images/carousel-"+i+".jpg')";
+          container.appendChild(div);
+        }
+        afficherMasquer();
+      }
+
+      g.onclick=function(){
+        if(p>-nbr+1){ 
+          p--;
+          container.style.transform="translate("+p*1280+"px)";
+          container.style.transition = "all 0.5s ease";
+          afficherMasquer();
+        }
+      }
+
+      d.onclick=function(){
+        if(p<0){ 
+          p++;
+          container.style.transform="translate("+p*1280+"px)";
+          container.style.transition = "all 0.5s ease";
+          afficherMasquer();
+        }
+      }
+
+      function afficherMasquer(){
+        if(p== -nbr+1)
+          g.style.visibility="hidden";
+        else
+          g.style.visibility="visible";
+        if(p==0)
+          d.style.visibility="hidden";
+        else
+          d.style.visibility="visible";
+      }
+
+
+    </script>
   </body>
 </html>
