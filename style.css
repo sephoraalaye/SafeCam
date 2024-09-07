@@ -8,14 +8,83 @@
 
 body{
     font-family: "Montserrat", sans-serif;
+    position: relative;
 }
+
+header{
+    display: flex;
+    align-items: center;
+    height: 11vh;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    position: fixed;
+    /* gap: 10%; */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 40px;
+    /* border: #120f2c solid 1px; */
+    margin-left: 2%;
+}
+
+.rouge{
+    color: #f24d5d;
+}
+
+.bleu{
+    color: #2878eb;
+}
+
+header nav{
+  width: 59%; 
+  display: flex;
+  justify-content: space-between;
+  font-size: 19px;
+}
+
+nav div{
+    width: 32%;
+    height: 11vh;
+    background-color: #f24d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+nav div i{
+    color: white;
+}
+
+header ul{
+    /* border: #120f2c solid 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64%;
+    gap: 8%;
+}
+
+
+
+header ul li{
+   list-style: none;
+}
+
+header ul li:hover{
+    color: #2878eb;
+ }
 
 #carrousel{
     width: 100%;
     height: 100vh;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #container{
