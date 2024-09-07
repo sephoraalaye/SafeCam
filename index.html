@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
     <title>SafeCam | Acceuil</title>
   </head>
   <body>
@@ -411,70 +412,5 @@
             <div>Designed by <a href="index.html">HTML Codex</a></div>
         </div>
     </footer>
-
-
-    <script>
-        document.body.onload=function(){
-        nbr = 3;
-        container = document.getElementById("container");
-        container.style.width=(1280*nbr*2)+"px";
-        
-        for(var i=1;i<=nbr;i++){
-          div1=document.createElement("div");
-          div1.className="photo";
-          div1.style.backgroundImage="url('images/carousel-"+i+".jpg')";
-          container.appendChild(div1);
-        }
-
-        for(var i=1;i<=nbr;i++){
-          div2=document.createElement("div");
-          div2.className="photo";
-          div2.style.backgroundImage="url('images/carousel-"+i+".jpg')";
-          container.appendChild(div2);
-        }
-
-      }
-
-      const imagePaths = [
-        'images/carousel-1.jpg',
-        'images/carousel-2.jpg',
-        'images/carousel-3.jpg',
-        'images/carousel-1.jpg',
-        'images/carousel-2.jpg',
-        'images/carousel-3.jpg',
-      ];
-
-      let currentIndex = 0;
-      let direction = 1; 
-      const totalImages = imagePaths.length;
-
-
-      function moveCarousel() {
-        
-          const translateValue = -currentIndex * 1280;
-          container.style.transform = `translateX(${translateValue}px)`;
-          container.style.transition = "all 0.5s ease";
-         
-         // Vérifier si nous sommes à la fin ou au début des images
-         if (currentIndex === totalImages - 1) {
-            direction = -1; // Inverser la direction pour reculer
-        } else if (currentIndex === 0) {
-            direction = 1; // Revenir à l'avant
-        }
-
-        // Mettre à jour l'index selon la direction
-        currentIndex += direction;
-
-    }
-
-      function startCarousel() {
-          setInterval(() => {
-              moveCarousel();
-          }, 2000); 
-      }
-
-    startCarousel();
-
-    </script>
   </body>
 </html>
