@@ -46,7 +46,8 @@ header nav{
   font-size: 19px;
 }
 
-nav div{
+nav #call{
+    text-decoration: none;
     width: 32%;
     height: 11vh;
     background-color: #f24d5d;
@@ -56,7 +57,7 @@ nav div{
     padding: 1%;
 }
 
-nav div i{
+nav a i{
     color: white;
 }
 
@@ -73,10 +74,32 @@ header ul{
 
 header ul li{
    list-style: none;
+   cursor: pointer; 
+      /* border: #120f2c solid 1px; */
+
+
 }
+
+header ul li a {
+    text-decoration: none;
+    position: relative;
+    
+ }
+
+header ul li:after {
+    content: "";
+    border-bottom: #2878eb 2px solid;
+    /* width: 55px; */
+    display: block;
+    position: absolute;
+    text-decoration: underline;
+ }
+
 
 header ul li:hover{
     color: #2878eb;
+   
+
  }
 
 #carrousel{
