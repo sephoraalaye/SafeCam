@@ -1,6 +1,7 @@
 container = document.getElementById("container");
 container.style.width=600+"%";
 
+
 const imagePaths = [
 'images/carousel-1.jpg',
 'images/carousel-2.jpg',
@@ -10,17 +11,24 @@ const imagePaths = [
 'images/carousel-3.jpg',
 ];
 
-imagePaths.forEach(path => {
-    const img = document.createElement('img');
-    img.src = path;
-    img.style.width = 100+"%";
-    container.appendChild(img);
-});
- 
+const totalImages = imagePaths.length;
+const blocDiv = document.getElementsByClassName("items");
+
+
+
+
+for (var i=0;i<totalImages;i++){
+    blocDiv[i].style.width = 100+"%";
+    blocDiv[i].style.background = "linear-gradient(rgba(20,79,121,0.7),rgba(69,109,158,0.7)),"+` url(${imagePaths[i]})`;
+    blocDiv[i].style.backgroundSize = "cover";
+}
+
+
+
 
 let currentIndex = 0;
 let direction = 1; // 1 pour avancer, -1 pour reculer
-const totalImages = imagePaths.length;
+
 
 function moveCarousel() {
     // alert(currentIndex);
