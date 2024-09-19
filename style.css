@@ -203,8 +203,6 @@ header ul li .active, header ul li a:hover{
     }
 }
 
-
-
 .gauche{
     animation: slideleft 1s ease forwards;
 }
@@ -223,15 +221,29 @@ header ul li .active, header ul li a:hover{
 }
 
 
-
-
-
 main .propos{
     height:228vh;
     margin: 3% 2%;  
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.transitionY200{
+    transform: translateY(200px);
+}
+
+.reveal{
+    position: relative;
+    opacity: 0;
+    transition: all 2s ease ;
+}
+
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .propos .pretexte{
@@ -241,7 +253,7 @@ main .propos{
     font-style: italic;
     display: flex;
     justify-content: center;
-    margin: 3% 0 4% 0;
+    margin: 0 0 4% 0;
     
 }
 
