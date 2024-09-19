@@ -1,26 +1,3 @@
-window.addEventListener('scroll', function() {
-    reveal(50);
-});
-
-
-
-function reveal(revealpoint){
-    let reveals = document.querySelectorAll(".reveal");
-    for (let i = 0; i< reveals.length ; i++){
-        let  windowheight = window.innerHeight;
-        let revealtop = reveals[i].getBoundingClientRect().top;
-        if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add('active');
-        }
-        else{
-            reveals[i].classList.remove('active');
-        }
-    }
-}
-
-
-
-
 container = document.getElementById("container");
 container.style.width=600+"%";
 const imagePaths = [
@@ -66,9 +43,25 @@ startCarousel();
 
 // ::::::FIN Carousel:::::://
 
-// window.addEventListener("scroll",reveal);
+window.addEventListener('scroll', reveal);
 
-// console.log(window.innerHeight);
+reveal();
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    var windowHeight = window.innerHeight;
+
+    reveals.forEach(function(reveal) {
+        var revealPoint = parseInt(reveal.getAttribute("data-reveal-point"), 10);
+        var revealTop = reveal.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveal.classList.add('active');
+        } else {
+            reveal.classList.remove('active');
+        }
+    });
+}
 
 
 
