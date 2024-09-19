@@ -14,10 +14,10 @@
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li> 
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="#">Pages</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <a href="tel:+22961528962" id="call">
           <i class="fas fa-phone"></i>
@@ -33,8 +33,8 @@
               <h1 class="titre">Best security services</h1>
               <h1 style="font-size: 32px;">Safe & Secure Home <br>For Your Family</h1>
               <div>
-                <a href="index.html" style="background-color: #2878eb;">Get quote</a>
-                <a href="index.html" style="background-color: #f24d5d;">Conctact us</a>
+                <a href="index.html" class="gauche" style="background-color: #2878eb;">Get quote</a>
+                <a href="index.html" class="droite" style="background-color: #f24d5d;">Conctact us</a>
               </div>
              </div>      
              <div class="items">
@@ -68,7 +68,7 @@
         </div>
       </div>
       <section class="propos">
-        <h1 class="entete">About us</h1>
+        <h1 class="entete" style="font-size: 29px;">About us</h1>
         <h1>We Offers Quality CCTV Systems & Services</h1>
         <p class="pretexte">
           Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit
@@ -259,20 +259,22 @@
             </table>
           </div>
         </div>
+      </section>
+      <section class="cadeau">
         <div class="offer">
-            <h1 class="special">Special offer</h1>
-            <h1 style="font-size: 32px;">Save 50% On All Items <br>Your First Order</h1>
-            <p>
-              Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et
-              dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos
-              vero ea et dolore eirmod et. Dolores <br> diam duo lorem. Elitr ut
-              dolores magna sit. Sea dolore sed et.
-            </p>
-            <div>
-              <a  href="index.html" style="background-color:#2878eb">Order now</a>
-              <a  href="index.html"  style="background-color:#f24d5d">Read more</a>
-            </div>
-        </div>
+          <h1 class="special">Special offer</h1>
+          <h1 style="font-size: 32px;">Save 50% On All Items <br>Your First Order</h1>
+          <p>
+            Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et
+            dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos
+            vero ea et dolore eirmod et. Dolores <br> diam duo lorem. Elitr ut
+            dolores magna sit. Sea dolore sed et.
+          </p>
+          <div>
+            <a  href="index.html" style="background-color:#2878eb">Order now</a>
+            <a  href="index.html"  style="background-color:#f24d5d">Read more</a>
+          </div>
+      </div>
       </section>
       <section class="members">
         <h1 class="entete">Team members</h1>
@@ -440,5 +442,16 @@
             <div>Designed by <a href="index.html">HTML Codex</a></div>
         </div>
     </footer>
+
+    <!-- <script>
+      window.onload = function() {
+      setTimeout(() => {
+          const titre = document.querySelectorAll(".titre");
+          titre.forEach(t => {
+              t.classList.add("deplacer");
+          });
+      }, 1000); // Ajoute un délai de 500ms
+    }
+    </script> -->
   </body>
 </html>

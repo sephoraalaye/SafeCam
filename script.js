@@ -19,7 +19,7 @@ const blocDiv = document.getElementsByClassName("items");
 
 for (var i=0;i<totalImages;i++){
     blocDiv[i].style.width = 100+"%";
-    blocDiv[i].style.background = "linear-gradient(rgba(20,79,121,0.7),rgba(69,109,158,0.7)),"+` url(${imagePaths[i]})`;
+    blocDiv[i].style.background = "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),"+` url(${imagePaths[i]})`;
     blocDiv[i].style.backgroundSize = "cover";
 }
 
@@ -34,7 +34,7 @@ function moveCarousel() {
     // alert(currentIndex);
     const translateValue = -currentIndex * 100 / totalImages; 
     container.style.transform = `translate(${translateValue}%)`;
-    container.style.transition = "all 0.5s ease";
+    container.style.transition = "all 0.5s ease 0.2s";
 
     if (currentIndex === totalImages - 1) {
         direction = -1; // Inverser la direction pour reculer
@@ -57,3 +57,6 @@ function startCarousel() {
 
 // Lancer le carrousel
 startCarousel();
+
+
+
