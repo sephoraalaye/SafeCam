@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
@@ -10,30 +9,39 @@
 }
 
 body{
-    font-family: "Josp", sans-serif;
+    font-family: "Open Sans", sans-serif;
     position: relative;
 }
 
 header{
+    /* position: fixed; */
     display: flex;
-    align-items: center;
-    height: 11vh;
+    height: 13.7vh;
     width: 100%;
-    position: absolute;
-    z-index: 8;
-    position: fixed;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
     background-color: white;
-    justify-content: space-between;
+    z-index: 8;
+    gap: 22.5%;
+    transition: all 0.2s ease ;
+    font-family: "Jost",sans-serif;
+}
+
+header .smallheight{
+    height: 10vh;
 }
 
 header h1{
-    font-size: 40px;
-    margin-left: 2%;
+    height: 100%;
+    font-family: "Josp", sans-serif;
+    font-size: 48px;
+    margin-left: 3.8%;
+    line-height: 58px;
+    display: flex;
+    align-items:center;
 }
 
 .rouge{
-    color: #f24d5d;
+    color: #f14d5d;
 }
 
 .bleu{
@@ -43,45 +51,45 @@ header h1{
 header nav{
   width: 59%; 
   display: flex;
-  /* justify-content: center; */
-  font-size: 19px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  /* letter-spacing: -1px; */
+  gap: 7%;
 }
 
 nav #call{
     text-decoration: none;
-    width: 32%;
-    height: 11vh;
-    background-color: #f24d5d;
+    width:33% ;
     display: flex;
+    gap: 3%;
     align-items: center;
     justify-content: center;
     padding: 1%;
+    background-color: #f14d5d;
+    color: white;
 }
 
 nav a i{
     color: white;
 }
 
-header ul{
+nav ul{
+    width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 68%;
-    gap: 0;
+    gap: 7%;
 }
-
-
 
 header ul li{
    list-style: none;
    cursor: pointer; 
    position: relative;
-   padding: 10px;
-   width: 30%;
-   height: 11vh;
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   /* border: #120f2c solid 1px; */
 }
 
 header ul li a {
@@ -96,9 +104,9 @@ header ul li a::before,header ul li a::after{
     position: absolute;
     content: " ";
     background-color: #2878eb;
-    height: 8%;
-    width: 0;
-    margin-top: 38px;
+    height: 20%;
+    width: 0px;
+    top: 180%;
     transition:all 0.5s ease;
 }
 
@@ -115,9 +123,9 @@ header ul li a:hover::before, header ul li a:hover::after {
     position: absolute;
     content: " ";
     background-color: #2878eb;
-    height: 8%;
+    height: 20%;
     width: 50%;
-    margin-top: 38px;
+    margin-bottom: 0px;
 }
 
 header ul li .active, header ul li a:hover{
@@ -126,29 +134,85 @@ header ul li .active, header ul li a:hover{
 
 #carrousel{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+    background: rgba(18, 15, 45, .5);
+}
+
+
+.tourne{
+    transform: rotate(180deg);
+}
+
+#carrousel img.next, #carrousel img.prev{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 52%;
+    /* background-color: #f14d5d; */
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0.4;
+
+}
+
+#carrousel img.next{
+    right: 3%;
+}
+
+#carrousel img.prev{
+    left: 3%;
+}
+
+
+#carrousel img.next:hover, #carrousel img.prev:hover{
+    opacity: 1;
 }
 
 #container{
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    
+    display: flex; 
+}
+
+#container .slideBloc{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+#carrousel #container .slide{
+    min-width: 100%;
+}
+
+
+#carrousel #container .slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
 }
 
 #container .items{
-    position: relative;
-    /* border: #120f2c solid 1px; */
-    width:20%;
+    position: absolute;
+    border: red solid 1px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:end;
+    justify-content:center;
     color: white;
     text-align: center;
+    font-family: "Jost",sans-serif;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
     /* gap: 5%; */
 }
 
@@ -164,22 +228,28 @@ header ul li .active, header ul li a:hover{
 
 
 #container .items .titre {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 3.2%;
-    animation: slideIn 1s ease forwards; /* Animation appliquée ici */
+    /* margin-bottom: 1%; */
+    animation: slideIn 1s ease forwards;
+    z-index: 3;
 }
 
 
 .items .titre + h1{
-   margin-bottom: 2.5%;
+   /* margin-bottom: 2.5%; */
+   font-size: 80px;
+   line-height: 96px;
+   font-weight: 700;
 }
 
 
 #container .items div{
-    margin-bottom: 11%;
+    margin-bottom: -1.7%;
     height: 16vh;
-    width: 27%;
+    width: 28%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,10 +260,12 @@ header ul li .active, header ul li a:hover{
     text-decoration: none;
     color: white;
     height: 9vh;
-    width: 40%;
+    width: 47%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
+    border-radius: 4px;
 }
 
 
@@ -206,8 +278,13 @@ header ul li .active, header ul li a:hover{
     }
 }
 
-.gauche{
+.items div a.gauche{
+    background-color: #2878eb;
     animation: slideleft 1s ease forwards;
+}
+
+.items div a.gauche:hover{
+    background-color:#f14d5d;
 }
 
 @keyframes slideright {
@@ -219,10 +296,39 @@ header ul li .active, header ul li a:hover{
     }
 }
 
-.droite{
+.items div a.droite{
     animation: slideright 1s ease forwards;
+    background-color:#f14d5d;
+
 }
 
+.items div a.droite:hover{
+    background-color:#2878eb;
+}
+
+#carrousel .rectangles{
+    position: absolute;
+    bottom: 4%;
+    z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1px;
+    align-items: end;
+}
+
+#carrousel .rectangles .rectangle{
+    height: 4.5vh;
+    width: 5px;
+    margin: 0 2px;
+    background-color:rgba(164, 156, 235, 0.5);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+#carrousel .rectangles .active{
+    height:7vh ;
+    background-color:white;
+}
 
 main .propos{
     height:228vh;
