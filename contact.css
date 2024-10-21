@@ -140,7 +140,6 @@ main{
     flex-direction: column;
     gap: 95px;
     font-family: "Josp", sans-serif;
-
 }
 
 .centrer{
@@ -156,7 +155,6 @@ h1.entete{
     letter-spacing: 5px;
     margin-bottom: 5px;
     font-family: "Jost",sans-serif;
-
 }
 
 .noire{
@@ -221,152 +219,26 @@ main .debut{
 
 
 
-main .services{
-    height: 160vh;
-    margin:0 6.8%;
-}
-
-
-.services .service{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height:80%;
-    gap: 4.5%;
-}
-
-.services .service div{
-    position: relative;
-    width: 29.5%;
-    height: 62vh;
-    background-color: #ecf4ff;
-    border-bottom: #2878eb 5px solid;
-    padding: 4%;
-    overflow: hidden;
-}
-
-.services .service div img{
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15%;
-}
-
-.services .service .couleur{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(40, 120, 235,0.8);
-    transition: left 0.5s ease;
-    border-bottom: none;
-}
-
-.services .service .cctv{
-    position: relative;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: "Jost",sans-serif;
-    text-transform: uppercase;
-}
-
-.services .service .cctv+p{
-    position: relative;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 34px;
-    font-family: "Jost",sans-serif;
-    margin-bottom: 10%;
-}
-
-.services .service .cctv+p+p{
-    position: relative;
-    font-family: "Opens Sans",sans-serif;
-    line-height: 24px;
-    margin-bottom: 10%;
-}
-
-.services .service div:hover .couleur{
-    left: 0;
-}
-
-.service a{
-    font-family: "Opens Sans",sans-serif;
-    position: relative;
-    text-decoration: none;
-    line-height: 24px;
-}
-
-.service div:hover a {
-    color: #ecf4ff;
-    z-index: 5;
-}
-
-.service div:hover p {
-    color: #ecf4ff;
-    z-index: 5;
-}
-
-.service div:hover img {
-    filter: brightness(0.8); 
-    z-index: 5;
-}
-
-
-main .cadeau{
-    height: 80vh;
+main section{
+    border: #120f2c 2px solid ;
+    height: 115vh;
     margin-bottom: 95px;
 }
 
-.blanche{
-    color: white;
-}
-
-
-.cadeau .offer{
-    background-image: linear-gradient( rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)),url("images/carousel-2.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5% 26% 5% 26%;
-}
-
-.offer p{
-    text-align: center;
-    line-height: 24px;
-    font-family: "Opens Sans",sans-serif;
-}
-
-.offer div{
-    margin-top: 5%;
-    height: 15%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-    font-family: "Jost",sans-serif;
+section > div{
+    background-color: #f14d5d;
+    height: 72%;
 
 }
 
-.offer div a{
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    display:block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    padding: 5%;
+section > div form{
+    border: #120f2c solid 1px;
 }
 
+section > div div{
+    /* border: red solid 1px; */
+
+}
 
 
 

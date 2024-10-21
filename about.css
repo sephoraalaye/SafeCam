@@ -12,6 +12,7 @@
 body{
     font-family: "Open Sans", sans-serif;
     position: relative;
+    
 }
 
 header{
@@ -146,8 +147,7 @@ main{
     color: white;
 }
 
-main .about{
-    /* background-image: url("images/carousel-1.jpg"); */
+main .debut{
     background-image: linear-gradient( rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)),url("images/carousel-1.jpg");
     background-size: cover ;
     background-repeat: no-repeat;
@@ -161,14 +161,14 @@ main .about{
 
 }
 
-.about  p:first-child{
+.debut  p:first-child{
     font-weight: 700;
     font-size: 80px;
     line-height: 96px;
     animation: apparution 2s ease forwards;
 }
 
-.about p:last-child{
+.debut p:last-child{
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
@@ -292,7 +292,7 @@ h1.entete{
 
 
 main .members{
-    margin: 0 7% 0 7%;
+    margin: 0 7% 95px 7%;
     height: 100vh;
     /* border: #120f2c solid 1px; */
 }
