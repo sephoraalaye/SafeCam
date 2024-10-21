@@ -142,6 +142,48 @@ main{
 
 }
 
+
+.blanche{
+    color: white;
+}
+
+main .about{
+    /* background-image: url("images/carousel-1.jpg"); */
+    background-image: linear-gradient( rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)),url("images/carousel-1.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josp", sans-serif;
+
+}
+
+.about  p:first-child{
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    animation: apparution 2s ease forwards;
+}
+
+.about p:last-child{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@keyframes apparution {
+    from{
+        transform: scale(0.01);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
 #carrousel{
     position: relative;
     width: 100%;
