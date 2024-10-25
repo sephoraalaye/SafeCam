@@ -1,3 +1,23 @@
+
+function liens() {
+    // const pages = document.getElementsByClassName("pages")[0];
+    const liens = document.querySelector(".pagesliens");
+    const a = liens.getElementsByTagName("a");
+
+    liens.style.visibility = "visible";
+    console.log(a);
+
+    Array.from(a).forEach((lien) => {
+        lien.addEventListener("click", function() {
+            lien.classList.add("activate");
+        });
+    });
+}
+
+
+
+
+
 const carouselRow = document.getElementById("container");
 const carouselSlides = document.getElementsByClassName("slideBloc");
 const rectangles = document.getElementsByClassName("rectangle");

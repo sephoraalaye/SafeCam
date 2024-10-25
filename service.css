@@ -135,6 +135,70 @@ header ul li .active, header ul li a:hover{
 } 
 
 
+
+
+.pagesliens .activate{
+    background-color: #2878eb;
+    color: white;
+
+}
+
+header + div.pagesliens{
+    border-radius: 2px;
+    position: absolute;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 13%;
+    height: 28vh;
+    background-color: white;
+    right: 26%;
+    border: #120f2c solid 1px;
+    visibility: hidden;
+}
+
+header + div a{
+    /* padding-left: 10%; */
+    padding: 3%;
+    width: 100%;
+    height: 5.2vh;
+    color: #1e2125;
+    text-decoration: none;
+    /* border: #120f2c solid 1px; */
+
+}
+
+header + div a:hover{
+    background-color: #e9ecef;
+
+}
+
+
+header ul li a.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    /* border: #120f2c solid 1px; */
+    gap: 5px;
+}
+
+
+
+header ul li a.pages i{
+    width: 20px;
+    height: 20px;
+    color: #120f2c;
+}
+
+header ul li a.pages:hover i{
+    color: #2878eb;
+}
+
+
+
+
 main{
     display: flex;
     flex-direction: column;

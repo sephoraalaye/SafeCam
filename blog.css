@@ -136,7 +136,6 @@ header ul li .active, header ul li a:hover{
 
 
 
-
 .pagesliens .activate{
     background-color: #2878eb;
     color: white;
@@ -175,6 +174,7 @@ header + div a:hover{
 }
 
 
+
 header ul li a.pages{
     display: flex;
     justify-content: center;
@@ -195,8 +195,6 @@ header ul li a.pages i{
 header ul li a.pages:hover i{
     color: #2878eb;
 }
-
-
 
 
 
@@ -248,29 +246,6 @@ main .debut{
     }
 }
 
-main .propos{
-    /* border: #120f2c solid 2px; */
-    display: flex;
-    height:84vh;
-    width: 86.4% ;
-    margin:0 6.8%;  
-    gap: 4%;
-}
-
-.propos div.image{
-    width: 40%;
-}
-
-.propos div.image img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.propos div.about{
-    /* border: #dc6b2d solid 1px; */
-    width: 56%;
-}
 
 h1.entete{
     font-weight: 500;
@@ -305,103 +280,91 @@ h1.entete{
     text-align: center;
 }
 
-.propos .pretexte{
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    /* font-style: italic; */
-    margin: 4% 0;
-    opacity: 0.8;
-    font-family: "Jost",sans-serif;
-}
-
-.pretexte+p{
-    font-family: "Opens Sans",sans-serif;
-    line-height: 24px;
-    font-size: 16px;
-}
-
-.propos .experience{ 
+main section{
+    height: 330vh;
+    margin: 0 6% 95px 6%;
     /* border: #120f2c solid 1px; */
-    width: 100%;
-    height: 41%;
     display: flex;
-    justify-content: center;
-    align-items: end;
-    gap: 3%;
-    font-family: "Jost",sans-serif;
+    gap: 4%;
 }
 
-.propos .experience div{
-    width: 50%;
-    height: 92%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-
-.experience i{
+.blanche{
     color: white;
-    font-size: 4em;
 }
 
-.experience p{
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-    line-height: 29px;
-    margin-top: 10%;
+.backRed{
+    background-color: #f24d5d;
 }
 
-
-
-main .members{
-    margin: 0 7% 95px 7%;
-    height: 100vh;
-    /* border: #120f2c solid 1px; */
-}
-
-.members .teams{
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-    height: 60%;
-    /* border: #120f2c solid 1px; */
-
-}
-
-.teams .team{
-    /* border: #120f2c solid 1px; */
-    width: 31%;
-    height: 100%;  
-    position: relative;
-}
-
-.team div{
-    position: absolute;
+.backBlue{
     background-color: #2878eb;
-    height:30%;
-    margin-top: -20%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
 }
 
-.team div p:first-child{
-    font-family: "Jost",sans-serif; 
-    font-weight: 600;
+
+
+.blogs .item{
+    height:100vh;
+    width: 100%;
+    position: relative;
+    /* border: #120f2d solid 1px; */
+}
+
+.blogs .date{
+    background-color: #f24d5d;
+    height: 10vh;
+    width: 15%;
+    margin: -89% 0 0 -6.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+
+.blogs .date .triangle{
+   position: absolute;
+   margin-top: -112%;
+   margin-left: -55%;
+   width: 0;
+   height: 0;
+   border-top: 55px solid transparent;
+   border-right: 50px solid #f24d5d;
+   border-left: 1px solid transparent;
+}
+
+.item .titre{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2878eb;
+    margin-top: -15%;
+    padding: 10%;
+    gap: 30%;
+    height: 26vh;
+}
+
+.item .titre p:last-child{
     font-size: 28px;
     line-height: 34px;
+    font-weight: 500;
 }
 
-.team div p:last-child{
-    font-family: "Opens Sans",sans-serif;
-    font-weight: 400;
-    line-height: 24px;
+.bleuciel{
+    color: #ecf4ff;
+}
+
+.majuscule{
+    text-transform: uppercase;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .opensans{
@@ -411,46 +374,281 @@ main .members{
 }
 
 
-.team .links{
-    position: absolute;
-    background-color: white;
-    width: 20%;
-    height: 30vh;
-    margin-top: -79%;
-    margin-left:90% ;
+section .blogs{
+    /* border: #120f2c solid 1px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    gap: 3%;
-    padding: 2%;
+    width: 65%;
+    gap: 5%;
+}
+
+section .categorie{
+    width: 32%;
+    /* border: #120f2c solid 1px; */
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.categorie form{
+    /* border: #120f2c solid 1px; */
+    height: 9vh;
+    display: flex;
+    gap: 0px;
+}
+
+.categorie form input[type="text"]{
+    width: 81%;
+   padding: 10px;
+   font-size: 16px;
+}
+
+
+
+.categorie form button{
+    width: 19%;
+    border: none;
+   border-radius: none;
+}
+
+
+.categorie .item{
+    /* border: #120f2c solid 1px; */
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh
+}
+
+.categorie  .title{
+    font-family: "Jost",sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #120f2d;
+
+}
+
+.categorie .item .title + div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.categorie .item .title + div a{
+    /* border: #120f2c solid 1px; */
+    text-decoration: none;
+    font-family: "Jost",sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    color: black;
+    padding: 10px;
+    height: 6vh;
+   align-items: center;
+    gap: 5px;
+    background-color: #ecf4ff;
+}
+
+.categorie .item .title +div a:hover{
+    color: #2060bc;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    /* border:#120f2c solid 1px; */
+    height: 145vh;
+}
+
+.posts .title + div{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.posts .title + div + div{
+    /* border:#120f2c solid 1px; */
+    display: flex;
     
 }
 
-
-.team .links a{
-    background: transparent;
-    border: solid 1px #f24d5d;
-    color: #f24d5d;
-    padding: 12%;
-    font-size: 16px;
+.posts .post{
+    /* border: #120f2c solid 1px; */
+    height: 16vh;
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    text-decoration: none;
-    width: 40px;
-    height: 40px;
+
 }
 
-.team .links a:hover{
-    color: black;
-    background-color: #f24d5d;
+.posts .post div{
+    width: 30%;
+    height: 100%;
 }
 
-.team img{
+.posts .post div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posts .post a{
+  text-decoration: none;
+  width: 70%;
+  background-color: #ecf4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  font-family: "Jost",sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+}
+
+.posts .post a:hover{
+    color: #2070bc;
+}
+
+.posts .image{
+    /* border: #120f2c solid 1px; */
+    width: 100%;
+    height: 40vh;
+}
+
+.posts .image img {
     width: 100%;
     height: 100%;
 }
+
+
+
+
+.tags .tag{
+    /* border: #120f2c solid 1px; */
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+
+
+.tags .tag a{
+    text-decoration: none;
+    font-family: "Jost",sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    background-color: #ecf4ff;
+    padding: 15px;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.categorie .tags{
+    /* border: #120f2c solid 1px; */
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+
+
+
+.categorie .plain{
+    /* border: #120f2c solid 1px; */
+    height: 52vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.plain .title + div{
+    /* border: #120f2c solid 1px; */
+    height: 40vh;
+    background-color: #ecf4ff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.plain .title + div p{
+    /* border: #120f2c solid 1px; */
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7vh;
+    text-align: center;
+}
+
+.plain .title + div a{
+    text-decoration: none;
+    background-color: #2878eb;
+    color: white;
+    padding: 2vh;
+    font-family: "Jost",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+
+}
+
+.plain .title + div a:hover{
+    background-color: #f24d5d;
+}
+
+
+section .next{
+    /* border: rgba(107, 106, 117,0.6) 1px solid ; */
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.next i, .next a{
+    border: rgba(107, 106, 117,0.2) solid 1px;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+.next a:hover{
+    background-color: rgba(107, 106, 117,0.2);
+}
+
+.next a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Opens Sans",sans-serif;
+
+}
+
+.opensans{
+    font-family: "Opens Sans",sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+
 
 
 footer{

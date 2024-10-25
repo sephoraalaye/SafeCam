@@ -6,61 +6,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="contact.css">
         <script src="script.js" defer ></script>
-        <title>SafeCam | Acceuil</title>
+        <title>SafeCam | Contact</title>
       </head>
 <body>
     <header>
-        <h1 ><span class="rouge">Safe</span><span class="bleu">Cam</span></h1>
+        <h1 ><span class="bleu">Safe</span><span class="rouge">Cam</span></h1>
         <nav>
           <ul>
             <li><a href="index.html" class="active">Home</a></li> 
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#">Pages</a></li>
+            <li><a class="pages" href="#" onclick="liens()">Pages <i class="fa-solid fa-caret-down"></i></a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <a href="tel:+22961528962" id="call">
-            <i class="fas fa-phone"></i>
-            <p>+229 61528962</p>
+            <i class="bi bi-telephone-outbound me-2"></i>
+            <p>+123 456 789</p>
           </a>
         </nav>
     </header> 
+      <div class="pagesliens">
+        <a href="index.html" class="opensans">Pricing Plan</a>
+        <a href="blog.html" class="opensans">Blog Grid</a>
+        <a href="detail.html" class="opensans">Blog Detail</a>
+        <a href="team.html" class="opensans">The Team</a>
+        <a href="testimonial.html" class="opensans">Testimonial</a>
+      </div>
     <main>
         <div class="debut blanche">
             <p>Contact</p>
             <p>Home  Contact</p>
         </div>
         
-        <section>
+        <section >
             <h1 class="entete bleu centrer reveal transitionY50" data-reveal-point="20">Contact us </h1>
             <h1 class="reveal espace_bas centrer transitionY50" data-reveal-point="20">Please Feel Free To<br>Contact Us</h1>
-            <div>
-                <form action="" method="get">
-                    <div>
-                        <input type="text" name="name" id="name" placeholder="Your Name">
-                        <input type="email" name="email" id="email" placeholder="Your Email">
-                    </div>
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
-                    <textarea name="comment" id="comment" placeholder="Message"></textarea>
+            <div class="container">
+                <form action="" method="post">
+                    <div >
+                        <input type="text" class="opensans" name="name" id="name" placeholder="Your Name">
+                        <input type="email" class="opensans" name="email" id="email" placeholder="Your Email">
+                    </div> <br>
+                    <input type="text" class="opensans" name="subject" id="subject" placeholder="Subject"><br>
+                    <textarea name="comment" class="opensans" id="comment" placeholder="Message"></textarea><br>
                     <input type="submit" value="Send Message">  
                 </form>
-                <div> 
+                <div class="maps"> 
                     <div>
-                        <i class="fa-solid fa-location-pin" style="color: #16479c;"></i>                        <p>Our Office</p>
-                        <p>123 Street, New York, USA</p>
+                        <i class="fa-solid fa-location-pin" style="color: #16479c;"></i> 
+                        <div class="map">
+                            <p>Our Office</p>
+                            <p class="opensans">123 Street, New York, USA</p>
+                        </div>
                     </div>
                     <div>
                         <i class="fa-regular fa-envelope" style="color: #1456c8;"></i>
-                        <p>Email Us</p>
-                        <p>info@example.com</p>
+                        <div class="map">
+                            <p>Email Us</p>
+                            <p class="opensans">info@example.com</p>
+                        </div>
                     </div>
                     <div>
                         <i class="fa-solid fa-mobile-screen-button" style="color: #235fc7;"></i>
-                        <p>Call Us</p>
-                        <p>+012 345 6789</p>
+                        <div class="map">
+                            <p>Call Us</p>
+                            <p class="opensans">+012 345 6789</p>
+                        </div>
                     </div>
-                    <div>
-
+                    <div class="carte">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12001247.519305438!2d-75.770041!3d42.74622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1729606011474!5m2!1sen!2sbd" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>                     
                     </div>
                 </div>
             </div>
