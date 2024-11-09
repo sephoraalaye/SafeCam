@@ -204,6 +204,7 @@ main{
     flex-direction: column;
     gap: 95px;
     font-family: "Josp", sans-serif;
+    margin-top: 13.7vh;
 }
 
 .centrer{
@@ -399,32 +400,46 @@ iframe{
 
 
 footer{
+    display: flex;  
+    flex-direction: column;
     background-color: #120f2c;
     color: white;
-    height: 79vh;
-
+    height: 82vh;
+    /* width: 100%; */
 }
 
-.liens_footer{
+footer > div:first-child{
+    height: 68%;
+    border: #f14d5d solid 1px;
+    margin: 48px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div:first-child .liens_footer{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    padding: 5%;
+    height: 65%;
 }
 
-.liens_footer .lien{
+footer > div:first-child .liens_footer .lien{
     width: 25%;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
 }
+
  
 .lien h2{
-    font-size: 29px;
-    font-weight: 700;
-    margin-bottom: 3%;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    font-family: "Jost",sans-serif; 
 }
 
 
 .lien a, .lien p{
-    margin-left: 3%;
     text-decoration: none;
     color: white;
     gap: 1%;
@@ -452,35 +467,41 @@ footer{
     font-size: 11px;
 }
 
-footer form {
-    /* margin-top: -2%; */
+footer > div:first-child form {
+    margin-top: 48px;
     display: flex ;
     justify-content: center;
     align-items: center;
-    height: 8vh;
-    padding: 0%;
-    font-size: 13px;
+    height: 20%;
+    border: #6b6a75 solid 1px;
 }
 
-footer form input[type = "email"]{
-    height: 90%;
-    width: 28%;
+footer > div:first-child form input[type = "email"]{
+    height: 85%;
+    width: 43%;
     border: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
     padding-left: 1%;
 }
 
-footer form input[type = "submit"]{
-    height: 90%;
-    width: 8%;
+footer > div:first-child form button[type = "submit"]{
+    text-align: center;
+    height: 85%;
+    width: 10%;
     border: none;
     background-color: #2878eb;
     color: white;
+    font-family: "Jost",sans-serif; 
+    font-weight: 600;
+    font-size: 16px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; 
 }
 
 footer .pied_page{
     background-color: #2878eb;
-    margin-top: 9%;
-    height: 8vh;
+    height: 14%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -492,4 +513,36 @@ footer .pied_page a {
     color: white;
 }
 
+@media (max-width: 767px) {
+    section .container{
+        flex-direction: column;
+    }
+    footer{
+        width: 100%;
+        height: 200vh;
+    }
 
+    footer > div:first-child{
+        justify-content: center;
+        height: 80%;
+    }
+
+    footer > div:first-child .liens_footer{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > div:first-child .liens_footer .lien{
+        
+    }
+
+    footer > div:first-child form{
+        
+        height: 8%;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 935px) {
+    
+}

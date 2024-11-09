@@ -14,8 +14,30 @@ body{
     position: relative;
 }
 
+
+/* Extra small devices (phones, 600px et moins) */
+@media only screen and (max-width:768px){
+
+
 header{
-    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    height: 13.7vh;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    z-index: 8;
+    gap: 22.5%;
+    transition: all 0.2s ease ;
+    font-family: "Jost",sans-serif;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px et plus) */
+@media only screen and (min-width:768px){
+
+header{
     display: flex;
     height: 13.7vh;
     width: 100%;
@@ -26,6 +48,12 @@ header{
     transition: all 0.2s ease ;
     font-family: "Jost",sans-serif;
 }
+
+}
+
+
+
+
 
 header .smallheight{
     height: 10vh;
