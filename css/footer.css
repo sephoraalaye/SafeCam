@@ -1,0 +1,204 @@
+
+
+footer{
+    display: flex;  
+    flex-direction: column;
+    background-color: #120f2c;
+    color: white;
+    height: 82vh;
+    /* width: 100%; */
+}
+
+footer > div:first-child{
+    height: 68%;
+    /* border: #f14d5d solid 1px; */
+    margin: 48px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div:first-child .liens_footer{
+    display: flex;
+    justify-content: center;
+    height: 65%;
+}
+
+footer > div:first-child .liens_footer .lien{
+    width: 25%;
+    /* border: white solid 1px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+ 
+.lien h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    font-family: "Jost",sans-serif; 
+}
+
+
+.lien a, .lien p{
+    text-decoration: none;
+    color: white;
+    gap: 1%;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+.lien a img{
+    height: 5vh;
+}
+
+.lien .links{
+    display: flex;
+    gap: 5%;
+}
+
+.links div{
+    background-color:#2878eb;
+    width: 17%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+footer > div:first-child form {
+    margin-top: 48px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+
+    /* border: #6b6a75 solid 1px; */
+}
+
+footer > div:first-child form input[type = "email"]{
+    height: 85%;
+    width: 43%;
+    border: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-left: 1%;
+}
+
+footer > div:first-child form button[type = "submit"]{
+    text-align: center;
+    height: 85%;
+    width: 10%;
+    border: none;
+    background-color: #2878eb;
+    color: white;
+    font-family: "Jost",sans-serif; 
+    font-weight: 600;
+    font-size: 16px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; 
+}
+
+footer .pied_page{
+    background-color: #2878eb;
+    height: 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 5% 0 5%;
+}
+
+footer .pied_page a {
+    color: white;
+}
+
+@media (max-width: 767px) {
+    
+    footer{
+        width: 100%;
+        height: 235vh;
+    }
+
+    footer > div:first-child{
+        justify-content: center;
+        height: 100%;
+        margin: 10%;
+    }
+
+    footer > div:first-child .liens_footer{
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > div:first-child .liens_footer .lien{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    footer > div:first-child form{
+        /* border: red solid 1px; */
+        height: 8%;
+        margin-top: 0;
+    }
+
+    footer > div:first-child form input[type = "email"]{
+        width: 80%;
+    }
+
+    footer > div:first-child form button[type = "submit"]{
+        width: 20%;
+    }
+
+    footer .pied_page{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2%
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 935px) {
+    footer{
+        width: 100%;
+        height: 160vh;
+    }
+
+    footer > div:first-child{
+        justify-content: center;
+        height: 100%;
+        margin: 10%;
+
+    }
+
+    footer > div:first-child .liens_footer{
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer > div:first-child .liens_footer .lien{
+        width: 50%;
+        margin-bottom: 6%;
+    }
+
+    footer > div:first-child form{
+        /* border: red solid 1px; */
+        height: 12%;
+        margin-top: 0;
+    }
+
+    footer > div:first-child form input[type = "email"]{
+        width: 60%;
+    }
+
+    footer > div:first-child form button[type = "submit"]{
+        width: 15%;
+    }
+
+
+}
